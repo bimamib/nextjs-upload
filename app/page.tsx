@@ -1,7 +1,10 @@
 import Card from "@/components/card";
 import Link from "next/link";
+import { getImages } from "@/lib/data";
 
-export default function Home() {
+export default async function Home() {
+  const images = await getImages();
+
   return (
     <div className="max-w-screen-lg mx-auto py-14">
       <div className="flex items-end justify-between">
@@ -14,7 +17,9 @@ export default function Home() {
         </Link>
       </div>
       <div className="grid md:grid-cols-3 gap-5 mt-10">
-        <Card />
+        {images.map((item) => (
+          <Card key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );
