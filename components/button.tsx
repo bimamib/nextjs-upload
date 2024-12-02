@@ -2,6 +2,7 @@
 import { useFormStatus } from "react-dom";
 import { clsx } from "clsx";
 import Link from "next/link";
+import { deleteImage } from "@/lib/actions";
 
 export const SubmitButton = ({ label }: { label: string }) => {
   const { pending } = useFormStatus();
@@ -52,7 +53,7 @@ export const DeleteButton = ({ id }: { id: string }) => {
   return (
     <form
       action={deleteImageWithId}
-      className="py-3 text-sm bg-gray-50 rounded-br-lg w-full hover:bg-gray-100 text-center"
+      className="py-3 text-sm bg-gray-50 rounded-br-md w-full hover:bg-gray-100 text-center"
     >
       <DeleteBtn />
     </form>
