@@ -2,8 +2,9 @@ import EditForm from "@/components/edit-form";
 import { getImageById } from "@/lib/data";
 import { notFound } from "next/navigation";
 
-const EditPage = async ({ params }: { params: { id: string } }) => {
-  const data = await getImageById(params.id);
+const EditPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const id = (await params).id;
+  const data = await getImageById(id);
   if (!data) return notFound();
 
   return (
