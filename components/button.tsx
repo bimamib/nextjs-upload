@@ -28,10 +28,18 @@ export const SubmitButton = ({ label }: { label: string }) => {
 export const EditButton = () => {
   return (
     <Link
-      href={}
-      className="py-3 text-sm bg-gray-50 rounded-lg hover:bg-gray-100 text-center "
+      href=""
+      className="py-3 text-sm bg-gray-50 rounded-lg hover:bg-gray-100 text-center"
     >
       Edit
     </Link>
+  );
+};
+
+export const DeleteButton = () => {
+  return (
+    <form className="py-3 text-sm bg-gray-50 rounded-lg hover:bg-gray-100 text-center">
+      <button type="submit">Delete</button>
+    </form>
   );
 };
