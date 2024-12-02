@@ -114,9 +114,12 @@ export const updateImage = async (
 };
 
 // Delete Image
-export const deleteImage = async (id: string) => {
+export const deleteImage = async (id: string): Promise<void> => {
   const data = await getImageById(id);
-  if (!data) return { message: "No data found" };
+  if (!data) {
+    console.error("No data found");
+    return;
+  }
 
   await del(data.image);
   try {
@@ -124,7 +127,7 @@ export const deleteImage = async (id: string) => {
       where: { id },
     });
   } catch (error) {
-    return { message: "Failed to delete data" };
+    console.error("Failed to delete data:", error);
   }
 
   revalidatePath("/");

@@ -52,7 +52,7 @@ export const DeleteButton = ({ id }: { id: string }) => {
   const deleteImageWithId = deleteImage.bind(null, id);
   return (
     <form
-      onSubmit={deleteImageWithId}
+      action={deleteImageWithId}
       className="py-3 text-sm bg-gray-50 rounded-br-lg w-full hover:bg-gray-100 text-center"
     >
       <DeleteBtn />
