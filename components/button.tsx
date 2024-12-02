@@ -52,11 +52,7 @@ export const DeleteButton = ({ id }: { id: string }) => {
 const DeleteBtn = () => {
   const { pending } = useFormStatus();
   return (
-    <button
-      type="submit"
-      className="flex items-center gap-2 px-2"
-      disabled={pending}
-    >
+    <button type="submit" className="flex items-center" disabled={pending}>
       {pending ? "Deleting..." : "Delete"}
     </button>
   );
