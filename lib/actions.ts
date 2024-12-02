@@ -33,7 +33,6 @@ const EditSchema = z.object({
     .optional(),
 });
 
-// Upload Image
 export const uploadImage = async (prevState: unknown, formData: FormData) => {
   const validatedFields = UploadSchema.safeParse(
     Object.fromEntries(formData.entries())
@@ -66,7 +65,7 @@ export const uploadImage = async (prevState: unknown, formData: FormData) => {
   redirect("/");
 };
 
-// Update Image
+// Update image
 export const updateImage = async (
   id: string,
   prevState: unknown,

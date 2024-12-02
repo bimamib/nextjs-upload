@@ -18,7 +18,7 @@ const Card = ({ data }: { data: Upload }) => {
         </div>
       </div>
       <div className="p-5">
-        <h1 className="text-2xl font-bold text-gray-800 truncate">
+        <h1 className="text-2xl font-bold text-gray-900 truncate">
           {data.title}
         </h1>
       </div>
