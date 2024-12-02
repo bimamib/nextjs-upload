@@ -10,6 +10,7 @@ const EditForm = ({ data }: { data: Upload }) => {
     updateImage.bind(null, data.id),
     null
   );
+
   return (
     <form action={formAction}>
       <div className="mb-4 pt-2">
