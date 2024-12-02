@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { uploadImage } from "@/lib/actions";
 import { useFormState } from "react-dom";
@@ -7,6 +6,7 @@ import { SubmitButton } from "@/components/button";
 
 const CreateForm = () => {
   const [state, formAction] = useFormState(uploadImage, null);
+
   return (
     <form action={formAction}>
       <div className="mb-4 pt-2">
