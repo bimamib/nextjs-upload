@@ -3,6 +3,7 @@
 import React from "react";
 import { uploadImage } from "@/lib/actions";
 import { useFormState } from "react-dom";
+import { SubmitButton } from "@/components/button";
 
 const CreateForm = () => {
   const [state, formAction] = useFormState(uploadImage, null);
@@ -30,9 +31,7 @@ const CreateForm = () => {
         </div>
       </div>
       <div className="mb-4 pt-4">
-        <button className="bg-blue-600 text-white w-full font-medium py-2.5 px-6 text-base rounded-lg hover:bg-blue-500">
-          Upload
-        </button>
+        <SubmitButton label="upload" />
       </div>
     </form>
   );
