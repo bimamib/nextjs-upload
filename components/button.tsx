@@ -1,8 +1,9 @@
 "use client";
 import { useFormStatus } from "react-dom";
 import { clsx } from "clsx";
+import Link from "next/link";
 
-export const SubmitButton = () => {
+export const SubmitButton = ({ label }: { label: string }) => {
   const { pending } = useFormStatus();
   return (
     <button
@@ -15,7 +16,22 @@ export const SubmitButton = () => {
       type="submit"
       disabled={pending}
     >
-      Upload
+      {label === "upload" ? (
+        <>{pending ? "Uploading..." : "Upload"}</>
+      ) : (
+        <>{pending ? "Updating..." : "Update"}</>
+      )}
     </button>
+  );
+};
+
+export const EditButton = () => {
+  return (
+    <Link
+      href={}
+      className="py-3 text-sm bg-gray-50 rounded-lg hover:bg-gray-100 text-center "
+    >
+      Edit
+    </Link>
   );
 };
