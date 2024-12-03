@@ -4,7 +4,7 @@ import type { Upload } from "@prisma/client";
 
 const Card = ({ data }: { data: Upload }) => {
   return (
-    <div className="max-w-sm border rounded-xl shadow">
+    <div className="w-full max-w-3xl border rounded-xl shadow overflow-hidden">
       <div className="p-2">
         <div className="relative aspect-video">
           <Image
