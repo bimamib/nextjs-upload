@@ -33,7 +33,11 @@ const CreateForm = () => {
         <input
           type="file"
           name="image"
-          className="block w-full border border-gray-200 rounded-lg text-sm focus:z-10 outline-none focus:outline-blue-500 disabled:opacity-50 disabled:pointer-events-none file:bg-gray-100 file:border-0 file:me-4 file:py-2 file:px-4"
+          className="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:outline-none focus:outline-blue-500 disabled:opacity-50 disabled:pointer-events-none 
+          file:bg-gray-100 
+          file:border-0 
+          file:me-4 
+          file:py-2 file:px-4"
         />
         <div aria-live="polite" aria-atomic="true">
           <p className="text-sm text-red-500 mt-2">{state?.error?.image}</p>
